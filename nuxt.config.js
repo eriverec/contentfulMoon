@@ -12,7 +12,11 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
-    ]
+    ],
+    script: [{
+      src: 'https://www.googletagmanager.com/gtag/js?id=UA-185905564-1',
+      async: true
+    }],
   },
 
   // Global CSS (https://go.nuxtjs.dev/config-css)
@@ -36,7 +40,12 @@ export default {
     '@nuxtjs/bulma',
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
+    '@nuxtjs/google-analytics',
   ],
+
+  googleAnalytics: {
+    id: 'UA-185905564-1'
+  },
 
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
   axios: {},
