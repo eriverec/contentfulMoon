@@ -1,0 +1,7 @@
+.boton__flotante {
+  margin: 16px;
+  display: inline-block;
+  position: fixed;
+  bottom: 4%;
+  right: 4%;
+}
