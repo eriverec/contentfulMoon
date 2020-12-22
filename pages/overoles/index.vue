@@ -1,31 +1,14 @@
 <template>
   <div class="container">
     <ul>
-      <li v-for="(post, index) in posts" :key="index">
-        <template>
-          <img :src="post.fields.imagen.fields.file.url" alt="text" />
-        </template>
-     
-        <nuxt-link :to="'overoles/' + post.fields.slug">{{
-          post.fields.titulo
-        }}</nuxt-link>
+      <li>
+        <nuxt-link to="overoles">titulo</nuxt-link>
       </li>
     </ul>
   </div>
 </template>
 
-<script>
-export default {
-  computed: {
-    posts() {
-      return this.$store.state.posts.posts;
-    }
-  },
-  async fetch({ store, params }) {
-    await store.dispatch("posts/getPosts", params.slug);
-  }
-};
-</script>
+
 
 <style scoped>
 .texto__imagen {
